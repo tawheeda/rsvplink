@@ -311,6 +311,15 @@ a{color:inherit}
 }
 .pkg-btn:hover{filter:brightness(1.05)}
 
+.pkg.sold-out {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.pkg.sold-out .pkg-btn {
+  background: #999;
+  cursor: not-allowed;
+}
+
 /* help strip */
 .help-strip{
   margin-top:14px;
@@ -519,4 +528,86 @@ input::placeholder{color:rgba(233,243,238,0.55)}
   .help-strip{flex-direction:column; align-items:flex-start}
   .hero h1{font-size:26px}
   .modal{width:100vw;height:100vh;max-height:none;border-radius:0}
+}
+
+/* =========================
+   MODAL VISIBILITY FIX
+   (FULLY OPAQUE + READABLE)
+   ========================= */
+
+/* Darken overlay slightly more for contrast */
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.78);
+}
+
+/* Make modals fully opaque */
+.modal {
+  background: #0f1713;              /* solid panel color */
+  color: var(--text);
+  border: 1px solid rgba(201,164,92,0.28);
+}
+
+/* Premium gradient accent (subtle, not transparent) */
+.premium-modal {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(201,164,92,0.08),
+      rgba(15,23,19,1)
+    );
+}
+
+/* Headings clearer */
+.modal h2,
+.modal h3,
+.modal legend {
+  color: var(--gold2);
+}
+
+/* Body text readability */
+.modal p,
+.modal label,
+.modal .muted {
+  color: #d8e3dd;
+}
+
+/* Inputs more visible */
+.modal input,
+.modal select {
+  background: #0b0f0d;
+  border: 1px solid rgba(255,255,255,0.18);
+  color: var(--text);
+}
+
+.modal input::placeholder {
+  color: rgba(233,243,238,0.6);
+}
+
+/* Accordion contrast */
+.player-accordion {
+  background: #0b0f0d;
+}
+
+.player-accordion summary {
+  background: #101a15;
+  color: var(--text);
+}
+
+/* Package summary box */
+.package-summary {
+  background: #111d17;
+  border: 1px solid rgba(201,164,92,0.35);
+}
+
+/* Thank you modal clarity */
+.thanks-modal {
+  background: #0f1713;
+  border: 1px solid rgba(201,164,92,0.35);
+}
+
+/* Mobile: full-height but readable */
+@media (max-width: 700px) {
+  .modal {
+    background: #0f1713;
+  }
 }

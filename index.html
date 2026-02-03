@@ -117,7 +117,7 @@
           <div class="pkg-what">What you get</div>
           <ul class="pkg-list">
             <li>16 golfers (4 Four-Balls)</li>
-            <li>Gala dinner table for 8</li>
+            <li>Prize Giving dinner table for 16</li>
             <li>Premium event branding & recognition</li>
             <li>Top-tier exposure across platforms</li>
           </ul>
@@ -134,7 +134,7 @@
           <div class="pkg-what">What you get</div>
           <ul class="pkg-list">
             <li>12 golfers (3 Four-Balls)</li>
-            <li>Gala dinner table for 8</li>
+            <li>Prize Giving dinner table for 12</li>
             <li>High-visibility branding opportunities</li>
             <li>Premium sponsor recognition</li>
           </ul>
@@ -151,7 +151,7 @@
           <div class="pkg-what">What you get</div>
           <ul class="pkg-list">
             <li>8 golfers (2 Four-Balls)</li>
-            <li>Gala dinner table for 8</li>
+            <li>Prize Giving dinner table for 8</li>
             <li>Brand presence at key touchpoints</li>
             <li>Sponsor recognition</li>
           </ul>
@@ -168,6 +168,7 @@
           <div class="pkg-what">What you get</div>
           <ul class="pkg-list">
             <li>8 golfers (2 Four-Balls)</li>
+            <li>Prize Giving dinner table for 8</li>
             <li>On-day branding opportunities</li>
             <li>Sponsor acknowledgment</li>
           </ul>
@@ -175,20 +176,21 @@
         </article>
 
         <!-- GOODIE -->
-        <article class="pkg" data-package="goodie">
-          <div class="pkg-top">
-            <h3>Goodie Bag Sponsor</h3>
-            <div class="pkg-price">R150 000</div>
-          </div>
-          <p class="pkg-sub">Brand in players’ hands all day.</p>
-          <div class="pkg-what">What you get</div>
-          <ul class="pkg-list">
-            <li>4 golfers (1 Four-Ball)</li>
-            <li>Gala dinner table for 4</li>
-            <li>Branded presence via goodie bags</li>
-          </ul>
-          <button class="pkg-btn" type="button">RSVP</button>
-        </article>
+<article class="pkg sold-out" data-package="goodie">
+  <div class="pkg-top">
+    <h3>Goodie Bag Sponsor</h3>
+    <div class="pkg-price">SOLD OUT</div>
+  </div>
+  <p class="pkg-sub">Brand in players’ hands all day.</p>
+  <div class="pkg-what">What you get</div>
+  <ul class="pkg-list">
+    <li>4 golfers (1 Four-Ball)</li>
+    <li>Prize Giving dinner table for 4</li>
+    <li>Branded presence via goodie bags</li>
+  </ul>
+  <button class="pkg-btn" type="button" disabled>SOLD OUT</button>
+</article>
+
 
         <!-- FOURBALL -->
         <article class="pkg" data-package="fourball">
@@ -220,6 +222,21 @@
           </ul>
           <button class="pkg-btn" type="button">RSVP</button>
         </article>
+
+                <!-- DINNER ONLY -->
+<article class="pkg" data-package="dinner-only">
+  <div class="pkg-top">
+    <h3>Dinner Only</h3>
+    <div class="pkg-price">R1 500</div>
+  </div>
+  <p class="pkg-sub">Prize giving dinner access.</p>
+  <div class="pkg-what">What you get</div>
+  <ul class="pkg-list">
+    <li>A seat at the prize giving dinner table</li>
+  </ul>
+  <button class="pkg-btn" type="button">RSVP</button>
+</article>
+
       </div>
 
       <div class="help-strip">
@@ -311,6 +328,20 @@
           </ul>
           <button class="pkg-btn" type="button">Select Table</button>
         </article>
+
+        <article class="pkg" data-gala="Single-Ticket">
+          <div class="pkg-top">
+            <h3>Single Ticket</h3>
+            <div class="pkg-price">R20 000</div>
+          </div>
+          <p class="pkg-sub">Elegant participation at the dinner.</p>
+          <div class="pkg-what">What you get</div>
+          <ul class="pkg-list">
+            <li>1 seat at the gala dinner table</li>
+            <li>Recognition at the dinner</li>
+          </ul>
+          <button class="pkg-btn" type="button">Select Ticket</button>
+        </article>
       </div>
 
       <!-- gala credibility -->
@@ -384,6 +415,7 @@
             <option value="goodie">Goodie Bag Sponsor</option>
             <option value="fourball">Four-Ball Only</option>
             <option value="watering">Watering Hole Sponsor</option>
+            <option value="dinner-only">Prize Giving Dinner Ticket</option>
           </select>
         </fieldset>
 
@@ -475,6 +507,7 @@
             <option value="platinum">Platinum Table – R500 000</option>
             <option value="gold">Gold Table – R350 000</option>
             <option value="silver">Silver Table – R200 000</option>
+            <option value="single-ticket">Single Ticket – R20 000</option>
           </select>
 
           <select id="tableQty" required>

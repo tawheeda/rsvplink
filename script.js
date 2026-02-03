@@ -101,7 +101,8 @@ const packageFourballs = {
   goodie: 1,
   fourball: 1,
   watering: 0,
-  "dinner-only": 0
+  "dinner-only": 0,
+  "individual-golfer": 1 // Added individual golfer package here
 };
 
 function resetGolfModal() {
@@ -196,7 +197,13 @@ packageSelect.addEventListener("change", () => {
   }
 
   // Players for golf packages
-  const totalPlayers = (packageFourballs[selected] || 0) * 4;
+  let totalPlayers;
+  if (selected === "individual-golfer") {
+    totalPlayers = 1; // Individual Golfer = 1 player
+  } else {
+    totalPlayers = (packageFourballs[selected] || 0) * 4;
+  }
+
   if (!totalPlayers) return;
 
   for (let i = 1; i <= totalPlayers; i++) {

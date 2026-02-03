@@ -3,107 +3,369 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Celebrity Golf Day RSVP</title>
+  <title>Durban Bush Bucks Foundation – RSVP</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <!-- NAV / HEADER -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-mark">DBB</div>
+        <div class="brand-text">
+          <div class="brand-title">Durban Bush Bucks Foundation</div>
+          <div class="brand-sub">Celebrity Golf Day & Gala Dinner</div>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <a class="topbar-link" href="#golfSection">Golf Day</a>
+        <a class="topbar-link" href="#galaSection">Gala Dinner</a>
+      </div>
+    </div>
+  </header>
 
   <!-- HERO -->
   <section class="hero">
-    <h1>Welcome to the Celebrity Golf Day</h1>
-    <p>
-      Thank you for showing interest in our Celebrity Golf Day hosted by the
-      Durban Bush Bucks Foundation. This initiative honours football heritage
-      while raising support for youth development and community upliftment
-      programmes across KwaZulu-Natal.
-    </p>
-  </section>
-
-  <!-- PACKAGES -->
-  <section class="packages">
-    <h2>Select Your Golf Day Sponsorship Package</h2>
-
-    <div class="package-grid">
-
-      <div class="package-card" data-package="main">
-        <h3>Main Sponsor</h3>
-        <p>4 Four-Balls · Prize Giving Dinner Table for 16</p>
-        <span class="price">R600 000</span>
-        <button type="button">Select Package</button>
-      </div>
-
-      <div class="package-card" data-package="platinum">
-        <h3>Platinum Sponsor</h3>
-        <p>3 Four-Balls · Prize Giving Dinner Table for 12</p>
-        <span class="price">R450 000</span>
-        <button type="button">Select Package</button>
-      </div>
-
-      <div class="package-card" data-package="gold">
-        <h3>Gold Sponsor</h3>
-        <p>2 Four-Balls · Prize Giving Dinner Table for 8</p>
-        <span class="price">R350 000</span>
-        <button type="button">Select Package</button>
-      </div>
-
-      <div class="package-card" data-package="silver">
-        <h3>Silver Sponsor · Prize Giving Dinner Table for 8</h3>
-        <p>2 Four-Balls</p>
-        <span class="price">R250 000</span>
-        <button type="button">Select Package</button>
-      </div>
-
-      <div class="package-card" data-package="goodie">
-        <h3>Goodie Bag Sponsor</h3>
-        <p>1 Four-Ball · Prize Giving Dinner Table for 4</p>
-        <span class="price">R150 000</span>
-        <button type="button">Select Package</button>
-      </div>
-
-      <div class="package-card" data-package="fourball">
-        <h3>Four-Ball Only</h3>
-        <p>1 Four-Ball · Prize Giving Dinner Table for 4</p>
-        <span class="price">R10 000</span>
-        <button type="button">Select Package</button>
-      </div>
-
-      <div class="package-card" data-package="watering">
-        <h3>Watering Hole Sponsor</h3>
-        <p>Brand activation opportunity with prize giving dinner seating for 2</p>
-        <span class="price">R30 000</span>
-        <button type="button">Select Package</button>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="packages">
-  <h2>Gala Dinner Table Sponsorship</h2>
-
-  <div class="package-grid">
-    <div class="package-card" data-gala="true">
-      <h3>Gala Dinner Table</h3>
-      <p>Premium fundraising dinner honouring Professor Mlungisi Ngubane</p>
-      <span class="price">From R200 000 per table</span>
-      <button type="button" id="openGalaBtn">Select Table</button>
-    </div>
-  </div>
-</section>
-
-
-  <!-- RSVP MODAL -->
-  <div class="modal-overlay" id="rsvpModal">
-    <div class="modal">
-      <button class="close-modal" id="closeModal">&times;</button>
-
-      <h2>RSVP Details</h2>
-      <p class="modal-intro">
-        Please complete the form below to confirm your participation.
+    <div class="hero-inner">
+      <h1>Welcome to the Celebrity Golf Day & Gala Dinner</h1>
+      <p>
+        Thank you for showing interest in our event. Your support helps honour football heritage
+        and drives youth development and community upliftment programmes across KwaZulu-Natal.
       </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">Premium</div>
+          <div class="stat-label">Sponsorship Opportunities</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">High</div>
+          <div class="stat-label">Brand Visibility</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">Real</div>
+          <div class="stat-label">Community Impact</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY THIS EVENT MATTERS (Credibility) -->
+  <section class="impact">
+    <div class="section-head">
+      <h2>Why This Event Matters</h2>
+      <p class="muted">
+        Sponsoring this event supports meaningful development outcomes while positioning your brand
+        alongside respected sport and community leaders.
+      </p>
+    </div>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="impact-ico">⚽</div>
+        <div class="impact-title">Youth Development</div>
+        <div class="impact-text">Opportunities for youth through sport and mentorship.</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-ico">🏫</div>
+        <div class="impact-title">Community Upliftment</div>
+        <div class="impact-text">Support initiatives that create lasting local impact.</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-ico">📣</div>
+        <div class="impact-title">Brand Visibility</div>
+        <div class="impact-text">Recognition across platforms and at premium event touchpoints.</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-ico">🤝</div>
+        <div class="impact-title">Trusted Alignment</div>
+        <div class="impact-text">A credible platform for CSI and stakeholder engagement.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOLF SECTION WRAPPER (collapsible) -->
+  <section id="golfSection" class="event-section">
+    <div class="event-header">
+      <div>
+        <h2>Celebrity Golf Day Sponsorship</h2>
+        <p class="muted">Choose a package below. You’ll complete details in a premium RSVP modal.</p>
+      </div>
+      <button type="button" class="min-toggle" id="toggleGolf">Minimize</button>
+    </div>
+
+<div class="event-banner banner-golf">
+  <div class="banner-overlay"></div>
+  <div class="banner-content">
+    <div class="banner-kicker">Celebrity Golf Day</div>
+    <h3 class="banner-title">Tee off for impact</h3>
+    <p class="banner-text">
+      Premium sponsorship opportunities, brand visibility, and meaningful community upliftment.
+    </p>
+  </div>
+</div>
+
+    <div class="event-body" id="golfBody">
+      <div class="package-grid premium-grid">
+        <!-- MAIN -->
+        <article class="pkg premium" data-package="main">
+          <div class="pkg-top">
+            <h3>Main Sponsor</h3>
+            <div class="pkg-price">R600 000</div>
+          </div>
+          <p class="pkg-sub">Highest visibility across the event.</p>
+          <div class="pkg-what">What you get</div>
+          <ul class="pkg-list">
+            <li>16 golfers (4 Four-Balls)</li>
+            <li>Gala dinner table for 8</li>
+            <li>Premium event branding & recognition</li>
+            <li>Top-tier exposure across platforms</li>
+          </ul>
+          <button class="pkg-btn" type="button">RSVP</button>
+        </article>
+
+        <!-- PLAT -->
+        <article class="pkg" data-package="platinum">
+          <div class="pkg-top">
+            <h3>Platinum Sponsor</h3>
+            <div class="pkg-price">R450 000</div>
+          </div>
+          <p class="pkg-sub">Strong brand presence and hospitality.</p>
+          <div class="pkg-what">What you get</div>
+          <ul class="pkg-list">
+            <li>12 golfers (3 Four-Balls)</li>
+            <li>Gala dinner table for 8</li>
+            <li>High-visibility branding opportunities</li>
+            <li>Premium sponsor recognition</li>
+          </ul>
+          <button class="pkg-btn" type="button">RSVP</button>
+        </article>
+
+        <!-- GOLD -->
+        <article class="pkg" data-package="gold">
+          <div class="pkg-top">
+            <h3>Gold Sponsor</h3>
+            <div class="pkg-price">R350 000</div>
+          </div>
+          <p class="pkg-sub">Balanced brand exposure & participation.</p>
+          <div class="pkg-what">What you get</div>
+          <ul class="pkg-list">
+            <li>8 golfers (2 Four-Balls)</li>
+            <li>Gala dinner table for 8</li>
+            <li>Brand presence at key touchpoints</li>
+            <li>Sponsor recognition</li>
+          </ul>
+          <button class="pkg-btn" type="button">RSVP</button>
+        </article>
+
+        <!-- SILVER -->
+        <article class="pkg" data-package="silver">
+          <div class="pkg-top">
+            <h3>Silver Sponsor</h3>
+            <div class="pkg-price">R250 000</div>
+          </div>
+          <p class="pkg-sub">Solid participation with visibility.</p>
+          <div class="pkg-what">What you get</div>
+          <ul class="pkg-list">
+            <li>8 golfers (2 Four-Balls)</li>
+            <li>On-day branding opportunities</li>
+            <li>Sponsor acknowledgment</li>
+          </ul>
+          <button class="pkg-btn" type="button">RSVP</button>
+        </article>
+
+        <!-- GOODIE -->
+        <article class="pkg" data-package="goodie">
+          <div class="pkg-top">
+            <h3>Goodie Bag Sponsor</h3>
+            <div class="pkg-price">R150 000</div>
+          </div>
+          <p class="pkg-sub">Brand in players’ hands all day.</p>
+          <div class="pkg-what">What you get</div>
+          <ul class="pkg-list">
+            <li>4 golfers (1 Four-Ball)</li>
+            <li>Gala dinner table for 4</li>
+            <li>Branded presence via goodie bags</li>
+          </ul>
+          <button class="pkg-btn" type="button">RSVP</button>
+        </article>
+
+        <!-- FOURBALL -->
+        <article class="pkg" data-package="fourball">
+          <div class="pkg-top">
+            <h3>Four-Ball Only</h3>
+            <div class="pkg-price">R10 000</div>
+          </div>
+          <p class="pkg-sub">Participation package.</p>
+          <div class="pkg-what">What you get</div>
+          <ul class="pkg-list">
+            <li>4 golfers (1 Four-Ball)</li>
+            <li>Dinner table for 4</li>
+          </ul>
+          <button class="pkg-btn" type="button">RSVP</button>
+        </article>
+
+        <!-- WATERING -->
+        <article class="pkg" data-package="watering">
+          <div class="pkg-top">
+            <h3>Watering Hole Sponsor</h3>
+            <div class="pkg-price">R30 000</div>
+          </div>
+          <p class="pkg-sub">Activation + brand placement.</p>
+          <div class="pkg-what">What you get</div>
+          <ul class="pkg-list">
+            <li>Activation to share marketing collateral</li>
+            <li>Gala dinner table for 2</li>
+            <li>Branding on putting greens & platforms</li>
+          </ul>
+          <button class="pkg-btn" type="button">RSVP</button>
+        </article>
+      </div>
+
+      <div class="help-strip">
+        <div>
+          <div class="help-title">Not sure which package fits your brand?</div>
+          <div class="help-text">Choose any package to RSVP, or contact us for a tailored arrangement.</div>
+        </div>
+        <div class="help-actions">
+          <a class="help-btn" href="mailto:Bongiwe@undiscoveredbrand.co.za">Email Bongiwe</a>
+          <a class="help-btn outline" href="tel:+27647503474">Call Bongiwe</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- minimized bar -->
+    <div class="minibar hidden" id="golfMinibar">
+      <div class="minibar-left">
+        <strong>Golf Day Section</strong> <span class="muted">— minimized</span>
+      </div>
+      <button class="minibar-btn" type="button" data-expand="golf">Show</button>
+    </div>
+  </section>
+
+  <!-- GALA SECTION WRAPPER (collapsible) -->
+  <section id="galaSection" class="event-section">
+    <div class="event-header">
+      <div>
+        <h2>Gala Dinner Tables</h2>
+        <p class="muted">Select a table tier. Quantity options respect availability limits.</p>
+      </div>
+      <button type="button" class="min-toggle" id="toggleGala">Minimize</button>
+    </div>
+
+    <div class="event-banner banner-gala">
+  <div class="banner-overlay"></div>
+  <div class="banner-content">
+    <div class="banner-kicker">Gala Dinner</div>
+    <h3 class="banner-title">An evening of legacy & purpose</h3>
+    <p class="banner-text">
+      Reserve a table, honour excellence, and support youth development through sport.
+    </p>
+  </div>
+</div>
+
+
+    <div class="event-body" id="galaBody">
+      <div class="package-grid premium-grid">
+        <article class="pkg premium" data-gala="platinum">
+          <div class="pkg-top">
+            <h3>Platinum Table</h3>
+            <div class="pkg-price">R500 000</div>
+          </div>
+          <p class="pkg-sub">Maximum prestige and visibility.</p>
+          <div class="pkg-what">What you get</div>
+          <ul class="pkg-list">
+            <li>10 seats (1 table)</li>
+            <li>Top-tier recognition</li>
+            <li>Premium brand association</li>
+          </ul>
+          <button class="pkg-btn" type="button">Select Table</button>
+        </article>
+
+        <article class="pkg" data-gala="gold">
+          <div class="pkg-top">
+            <h3>Gold Table</h3>
+            <div class="pkg-price">R350 000</div>
+          </div>
+          <p class="pkg-sub">High-value hospitality and exposure.</p>
+          <div class="pkg-what">What you get</div>
+          <ul class="pkg-list">
+            <li>10 seats (1 table)</li>
+            <li>Brand recognition</li>
+            <li>Strong stakeholder presence</li>
+          </ul>
+          <button class="pkg-btn" type="button">Select Table</button>
+        </article>
+
+        <article class="pkg" data-gala="silver">
+          <div class="pkg-top">
+            <h3>Silver Table</h3>
+            <div class="pkg-price">R200 000</div>
+          </div>
+          <p class="pkg-sub">Elegant participation at the dinner.</p>
+          <div class="pkg-what">What you get</div>
+          <ul class="pkg-list">
+            <li>10 seats (1 table)</li>
+            <li>Recognition at the dinner</li>
+            <li>Great brand alignment</li>
+          </ul>
+          <button class="pkg-btn" type="button">Select Table</button>
+        </article>
+      </div>
+
+      <!-- gala credibility -->
+      <div class="sub-impact">
+        <div class="sub-impact-head">
+          <h3>Why the Gala Dinner Matters</h3>
+          <p class="muted">A premium fundraising evening supporting youth development through sport.</p>
+        </div>
+        <div class="sub-impact-grid">
+          <div class="sub-impact-card">🏆 Honours legacy & excellence</div>
+          <div class="sub-impact-card">🌱 Funds youth programmes</div>
+          <div class="sub-impact-card">🤝 Builds strategic partnerships</div>
+          <div class="sub-impact-card">📸 Premium brand moments</div>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="contact-box">
+        <h4>Need help or a tailored sponsorship?</h4>
+        <p>
+          To confirm a table or discuss a tailored sponsorship arrangement, please contact:<br>
+          <strong>Bongiwe Ngidi</strong> · Project coordinator<br>
+          <a href="mailto:Bongiwe@undiscoveredbrand.co.za">Bongiwe@undiscoveredbrand.co.za</a> |
+          <a href="tel:+27647503474">+27 64 750 34 74</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- minimized bar -->
+    <div class="minibar hidden" id="galaMinibar">
+      <div class="minibar-left">
+        <strong>Gala Dinner Section</strong> <span class="muted">— minimized</span>
+      </div>
+      <button class="minibar-btn" type="button" data-expand="gala">Show</button>
+    </div>
+  </section>
+
+  <!-- =========================
+       GOLF RSVP MODAL
+  ========================== -->
+  <div class="modal-overlay" id="rsvpModal">
+    <div class="modal premium-modal">
+      <button class="close-modal" id="closeModal" aria-label="Close">&times;</button>
+
+      <div class="modal-head">
+        <div>
+          <h2>Golf Day RSVP</h2>
+          <p class="muted">Complete the details below. A representative will confirm next steps.</p>
+        </div>
+        <button type="button" id="changePackageBtn" class="ghost-btn">Change package</button>
+      </div>
+
+      <div id="packageSummary" class="package-summary hidden"></div>
 
       <form id="rsvpForm">
-
         <fieldset>
           <legend>Main Contact</legend>
           <input type="text" placeholder="Full Name" required />
@@ -114,7 +376,7 @@
         <fieldset>
           <legend>Sponsorship Package</legend>
           <select id="packageSelect" disabled required>
-            <option value="">-- Select --</option>
+            <option value="">-- Selected package --</option>
             <option value="main">Main Sponsor</option>
             <option value="platinum">Platinum Sponsor</option>
             <option value="gold">Gold Sponsor</option>
@@ -125,25 +387,18 @@
           </select>
         </fieldset>
 
-        <button type="button" id="changePackageBtn" class="change-package-btn">
-          Change package
-        </button>
-
-        <div id="packageSummary" class="package-summary hidden"></div>
-
-        <!-- Company details (only Watering Hole) -->
+        <!-- Watering Hole only -->
         <fieldset id="companyFieldset" class="hidden">
           <legend>Company Details</legend>
           <input type="text" id="companyName" placeholder="Company Name" />
           <input type="text" id="vatNumber" placeholder="VAT Number" />
         </fieldset>
 
-        <!-- Watering Hole dietary requirements (2 guests) -->
         <fieldset id="wateringDietFieldset" class="hidden">
           <legend>Dinner Guest Dietary Requirements (2 Guests)</legend>
 
-          <div class="player-card">
-            <h3>Guest 1</h3>
+          <div class="mini-card">
+            <div class="mini-title">Guest 1</div>
             <select id="wateringDiet1">
               <option value="">Dietary Requirement</option>
               <option>None</option>
@@ -157,8 +412,8 @@
             <input type="text" id="wateringDietNotes1" placeholder="Dietary notes (optional)" />
           </div>
 
-          <div class="player-card">
-            <h3>Guest 2</h3>
+          <div class="mini-card">
+            <div class="mini-title">Guest 2</div>
             <select id="wateringDiet2">
               <option value="">Dietary Requirement</option>
               <option>None</option>
@@ -176,66 +431,81 @@
         <div id="playersContainer"></div>
 
         <button type="submit" class="submit-btn">Submit RSVP</button>
+        <p class="fineprint">Invoices and sponsorship agreements can be provided on request.</p>
       </form>
     </div>
   </div>
 
+  <!-- =========================
+       GALA RSVP MODAL
+  ========================== -->
   <div class="modal-overlay" id="galaModal">
-  <div class="modal">
-    <button class="close-modal" id="closeGalaModal">&times;</button>
+    <div class="modal premium-modal">
+      <button class="close-modal" id="closeGalaModal" aria-label="Close">&times;</button>
 
+      <div class="modal-head">
+        <div>
+          <h2>Gala Dinner RSVP</h2>
+          <p class="muted">Select tables and provide guest dietary requirements.</p>
+        </div>
+        <button type="button" id="changeGalaBtn" class="ghost-btn">Change table</button>
+      </div>
 
-    <h2>Gala Dinner Table Sponsorship</h2>
-    <p class="modal-intro">
-      The Durban Bush Bucks Foundation Gala Dinner honours Professor Mlungisi Ngubane
-      and supports youth development through football initiatives.
-    </p>
+      <div class="contact-box compact">
+        <h4>Need help or a tailored sponsorship?</h4>
+        <p>
+          <strong>Bongiwe Ngidi</strong> · Project coordinator<br>
+          <a href="mailto:Bongiwe@undiscoveredbrand.co.za">Bongiwe@undiscoveredbrand.co.za</a> |
+          <a href="tel:+27647503474">+27 64 750 34 74</a>
+        </p>
+      </div>
 
-    <div class="contact-box">
-  <h4>Need help or a tailored sponsorship?</h4>
-  <p>
-    To confirm a table or discuss a tailored sponsorship arrangement, please contact:<br>
-    <strong>Bongiwe Ngidi</strong> · Project Coordinator<br>
-    <a href="mailto:Bongiwe@undiscoveredbrand.co.za">Bongiwe@undiscoveredbrand.co.za</a> |
-    <a href="tel:+27647503474">+27 64 750 34 74</a>
-  </p>
-</div>
+      <form id="galaForm">
+        <fieldset>
+          <legend>Main Contact</legend>
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <input type="tel" placeholder="Phone Number" required />
+        </fieldset>
 
+        <fieldset>
+          <legend>Table Selection</legend>
+          <select id="tableType" required>
+            <option value="">Select Table Type</option>
+            <option value="platinum">Platinum Table – R500 000</option>
+            <option value="gold">Gold Table – R350 000</option>
+            <option value="silver">Silver Table – R200 000</option>
+          </select>
 
-    <form id="galaForm">
+          <select id="tableQty" required>
+            <option value="">Number of Tables</option>
+          </select>
+          <p class="fineprint">Each table seats 10 guests.</p>
+        </fieldset>
 
-      <fieldset>
-        <legend>Main Contact</legend>
-        <input type="text" placeholder="Full Name" required />
-        <input type="email" placeholder="Email Address" required />
-        <input type="tel" placeholder="Phone Number" required />
-      </fieldset>
+        <div id="galaGuests"></div>
 
-      <fieldset>
-        <legend>Table Selection</legend>
-
-        <select id="tableType" required>
-          <option value="">Select Table Type</option>
-          <option value="platinum">Platinum Table – R500 000</option>
-          <option value="gold">Gold Table – R350 000</option>
-          <option value="silver">Silver Table – R200 000</option>
-        </select>
-
-        <select id="tableQty" required>
-          <option value="">Number of Tables</option>
-          <option value="1">1 Table</option>
-          <option value="2">2 Tables</option>
-          <option value="3">3 Tables</option>
-        </select>
-      </fieldset>
-
-      <div id="galaGuests"></div>
-
-      <button type="submit" class="submit-btn">Submit Table Sponsorship</button>
-    </form>
+        <button type="submit" class="submit-btn">Submit RSVP</button>
+      </form>
+    </div>
   </div>
-</div>
 
+  <!-- =========================
+       THANK YOU POPUP
+  ========================== -->
+  <div class="modal-overlay" id="thanksModal">
+    <div class="modal thanks-modal">
+      <h2>Thank you for your interest</h2>
+      <p class="muted">
+        We’ve received your submission. Our team will contact you shortly to confirm next steps.
+      </p>
+      <div class="thanks-actions">
+        <a class="help-btn" href="mailto:Bongiwe@undiscoveredbrand.co.za">Email Bongiwe</a>
+        <a class="help-btn outline" href="tel:+27647503474">Call Bongiwe</a>
+      </div>
+      <button type="button" class="submit-btn" id="closeThanksBtn">Done</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

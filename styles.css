@@ -1,0 +1,263 @@
+.hidden { display: none !important; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f5;
+  color: #1e1e1e;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(to right, #0f3d2e, #145a3a);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero p {
+  max-width: 900px;
+  margin: 20px auto 0;
+  line-height: 1.6;
+}
+
+/* PACKAGES */
+.packages {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 40px auto 0;
+}
+
+.package-card {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+}
+
+.package-card .price {
+  display: block;
+  margin: 15px 0;
+  font-weight: bold;
+  color: #0f3d2e;
+}
+
+.package-card button {
+  padding: 10px 20px;
+  background: #0f3d2e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal {
+  background: white;
+  width: 95%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-intro {
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* FORM */
+fieldset {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px; /* prevents iOS zoom */
+}
+
+.player-card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: #145a3a;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Change package button */
+.change-package-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #145a3a;
+  background: white;
+  color: #145a3a;
+  font-weight: 700;
+  cursor: pointer;
+  margin: -10px 0 16px;
+}
+
+.change-package-btn:hover {
+  background: #f1f7f4;
+}
+
+/* Package summary */
+.package-summary {
+  background: #f1f7f4;
+  border: 1px solid #cfe6dc;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 0 0 20px;
+  text-align: left;
+}
+
+.package-summary h4 {
+  margin: 0 0 8px;
+  color: #0f3d2e;
+}
+
+.package-summary ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.package-summary li {
+  margin: 6px 0;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* Accordion */
+.player-accordion {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fafafa;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.player-accordion summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-weight: 700;
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.player-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.player-accordion summary::after {
+  content: "＋";
+  font-size: 18px;
+  line-height: 1;
+}
+
+.player-accordion[open] summary::after {
+  content: "−";
+}
+
+.player-accordion .player-inner {
+  padding: 16px;
+}
+
+/* MOBILE: 1 tile per row + full-screen modal */
+@media screen and (max-width: 768px), screen and (max-device-width: 768px) {
+  .packages {
+    padding: 24px 16px 32px;
+  }
+
+  .package-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: none;
+    width: 100%;
+    margin: 24px 0 0;
+  }
+
+  .package-card button {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .modal {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    border-radius: 0;
+    padding: 20px 16px;
+  }
+
+  .close-modal {
+    font-size: 32px;
+    top: 12px;
+    right: 12px;
+  }
+}

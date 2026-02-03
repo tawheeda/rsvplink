@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Celebrity Golf Day RSVP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Welcome to the Celebrity Golf Day</h1>
+    <p>
+      Thank you for showing interest in our Celebrity Golf Day hosted by the
+      Durban Bush Bucks Foundation. This initiative honours football heritage
+      while raising support for youth development and community upliftment
+      programmes across KwaZulu-Natal.
+    </p>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="packages">
+    <h2>Select Your Golf Day Sponsorship Package</h2>
+
+    <div class="package-grid">
+
+      <div class="package-card" data-package="main">
+        <h3>Main Sponsor</h3>
+        <p>4 Four-Balls · Prize Giving Dinner Table for 16</p>
+        <span class="price">R600 000</span>
+        <button type="button">Select Package</button>
+      </div>
+
+      <div class="package-card" data-package="platinum">
+        <h3>Platinum Sponsor</h3>
+        <p>3 Four-Balls · Prize Giving Dinner Table for 12</p>
+        <span class="price">R450 000</span>
+        <button type="button">Select Package</button>
+      </div>
+
+      <div class="package-card" data-package="gold">
+        <h3>Gold Sponsor</h3>
+        <p>2 Four-Balls · Prize Giving Dinner Table for 8</p>
+        <span class="price">R350 000</span>
+        <button type="button">Select Package</button>
+      </div>
+
+      <div class="package-card" data-package="silver">
+        <h3>Silver Sponsor · Prize Giving Dinner Table for 8</h3>
+        <p>2 Four-Balls</p>
+        <span class="price">R250 000</span>
+        <button type="button">Select Package</button>
+      </div>
+
+      <div class="package-card" data-package="goodie">
+        <h3>Goodie Bag Sponsor</h3>
+        <p>1 Four-Ball · Prize Giving Dinner Table for 4</p>
+        <span class="price">R150 000</span>
+        <button type="button">Select Package</button>
+      </div>
+
+      <div class="package-card" data-package="fourball">
+        <h3>Four-Ball Only</h3>
+        <p>1 Four-Ball · Prize Giving Dinner Table for 4</p>
+        <span class="price">R10 000</span>
+        <button type="button">Select Package</button>
+      </div>
+
+      <div class="package-card" data-package="watering">
+        <h3>Watering Hole Sponsor</h3>
+        <p>Brand activation opportunity with prize giving dinner seating for 2</p>
+        <span class="price">R30 000</span>
+        <button type="button">Select Package</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="packages">
+  <h2>Gala Dinner Table Sponsorship</h2>
+
+  <div class="package-grid">
+    <div class="package-card" data-gala="true">
+      <h3>Gala Dinner Table</h3>
+      <p>Premium fundraising dinner honouring Professor Mlungisi Ngubane</p>
+      <span class="price">From R200 000 per table</span>
+      <button type="button" id="openGalaBtn">Select Table</button>
+    </div>
+  </div>
+</section>
+
+
+  <!-- RSVP MODAL -->
+  <div class="modal-overlay" id="rsvpModal">
+    <div class="modal">
+      <button class="close-modal" id="closeModal">&times;</button>
+
+      <h2>RSVP Details</h2>
+      <p class="modal-intro">
+        Please complete the form below to confirm your participation.
+      </p>
+
+      <form id="rsvpForm">
+
+        <fieldset>
+          <legend>Main Contact</legend>
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <input type="tel" placeholder="Phone Number" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>Sponsorship Package</legend>
+          <select id="packageSelect" disabled required>
+            <option value="">-- Select --</option>
+            <option value="main">Main Sponsor</option>
+            <option value="platinum">Platinum Sponsor</option>
+            <option value="gold">Gold Sponsor</option>
+            <option value="silver">Silver Sponsor</option>
+            <option value="goodie">Goodie Bag Sponsor</option>
+            <option value="fourball">Four-Ball Only</option>
+            <option value="watering">Watering Hole Sponsor</option>
+          </select>
+        </fieldset>
+
+        <button type="button" id="changePackageBtn" class="change-package-btn">
+          Change package
+        </button>
+
+        <div id="packageSummary" class="package-summary hidden"></div>
+
+        <!-- Company details (only Watering Hole) -->
+        <fieldset id="companyFieldset" class="hidden">
+          <legend>Company Details</legend>
+          <input type="text" id="companyName" placeholder="Company Name" />
+          <input type="text" id="vatNumber" placeholder="VAT Number" />
+        </fieldset>
+
+        <!-- Watering Hole dietary requirements (2 guests) -->
+        <fieldset id="wateringDietFieldset" class="hidden">
+          <legend>Dinner Guest Dietary Requirements (2 Guests)</legend>
+
+          <div class="player-card">
+            <h3>Guest 1</h3>
+            <select id="wateringDiet1">
+              <option value="">Dietary Requirement</option>
+              <option>None</option>
+              <option>Halaal</option>
+              <option>Kosher</option>
+              <option>Vegetarian</option>
+              <option>Vegan</option>
+              <option>Gluten-Free</option>
+              <option>Other</option>
+            </select>
+            <input type="text" id="wateringDietNotes1" placeholder="Dietary notes (optional)" />
+          </div>
+
+          <div class="player-card">
+            <h3>Guest 2</h3>
+            <select id="wateringDiet2">
+              <option value="">Dietary Requirement</option>
+              <option>None</option>
+              <option>Halaal</option>
+              <option>Kosher</option>
+              <option>Vegetarian</option>
+              <option>Vegan</option>
+              <option>Gluten-Free</option>
+              <option>Other</option>
+            </select>
+            <input type="text" id="wateringDietNotes2" placeholder="Dietary notes (optional)" />
+          </div>
+        </fieldset>
+
+        <div id="playersContainer"></div>
+
+        <button type="submit" class="submit-btn">Submit RSVP</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="galaModal">
+  <div class="modal">
+    <button class="close-modal" id="closeGalaModal">&times;</button>
+
+
+    <h2>Gala Dinner Table Sponsorship</h2>
+    <p class="modal-intro">
+      The Durban Bush Bucks Foundation Gala Dinner honours Professor Mlungisi Ngubane
+      and supports youth development through football initiatives.
+    </p>
+
+    <div class="contact-box">
+  <h4>Need help or a tailored sponsorship?</h4>
+  <p>
+    To confirm a table or discuss a tailored sponsorship arrangement, please contact:<br>
+    <strong>Bongiwe Ngidi</strong> · Project Coordinator<br>
+    <a href="mailto:Bongiwe@undiscoveredbrand.co.za">Bongiwe@undiscoveredbrand.co.za</a> |
+    <a href="tel:+27647503474">+27 64 750 34 74</a>
+  </p>
+</div>
+
+
+    <form id="galaForm">
+
+      <fieldset>
+        <legend>Main Contact</legend>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="tel" placeholder="Phone Number" required />
+      </fieldset>
+
+      <fieldset>
+        <legend>Table Selection</legend>
+
+        <select id="tableType" required>
+          <option value="">Select Table Type</option>
+          <option value="platinum">Platinum Table – R500 000</option>
+          <option value="gold">Gold Table – R350 000</option>
+          <option value="silver">Silver Table – R200 000</option>
+        </select>
+
+        <select id="tableQty" required>
+          <option value="">Number of Tables</option>
+          <option value="1">1 Table</option>
+          <option value="2">2 Tables</option>
+          <option value="3">3 Tables</option>
+        </select>
+      </fieldset>
+
+      <div id="galaGuests"></div>
+
+      <button type="submit" class="submit-btn">Submit Table Sponsorship</button>
+    </form>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

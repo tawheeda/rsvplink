@@ -313,9 +313,9 @@ tableType.addEventListener("change", () => {
 
   // Single Ticket logic
   if (tier === "single-ticket") {
-    tableQty.innerHTML = `<option value="">Number of Tables</option>`;
+    tableQty.innerHTML = `<option value="">Number of Seats</option>`;
     for (let i = 1; i <= 5; i++) {
-      tableQty.innerHTML += `<option value="${i}">${i} Table${i > 1 ? "s" : ""}</option>`;
+      tableQty.innerHTML += `<option value="${i}">${i} Seat${i > 1 ? "s" : ""}</option>`;
     }
     return;
   }

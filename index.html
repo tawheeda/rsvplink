@@ -3,27 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="logo.png" rel="icon">
   <title>Durban Bush Bucks Foundation – RSVP</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <!-- NAV / HEADER -->
-  <header class="topbar">
-    <div class="topbar-inner">
-      <div class="brand">
-        <div class="brand-mark">DBB</div>
-        <div class="brand-text">
-          <div class="brand-title">Durban Bush Bucks Foundation</div>
-          <div class="brand-sub">Celebrity Golf Day & Gala Dinner</div>
-        </div>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top" aria-label="Durban Bush Bucks Foundation home">
+      <div class="brand-mark">
+        <img
+          src="logo.png"
+          alt="Durban Bush Bucks Foundation logo"
+          class="brand-logo"
+        />
+        <!-- Optional fallback text if image fails (hidden visually, kept for accessibility) -->
+        <span class="sr-only">DBB</span>
       </div>
-      <div class="topbar-actions">
-        <a class="topbar-link" href="#golfSection">Golf Day</a>
-        <a class="topbar-link" href="#galaSection">Gala Dinner</a>
+
+      <div class="brand-text">
+        <div class="brand-title">Durban Bush Bucks Foundation</div>
+        <div class="brand-sub">Celebrity Golf Day &amp; Gala Dinner</div>
       </div>
-    </div>
-  </header>
+    </a>
+
+    <nav class="topbar-actions" aria-label="Primary">
+      <a class="topbar-link" href="#golfSection">Golf Day</a>
+      <a class="topbar-link" href="#galaSection">Gala Dinner</a>
+    </nav>
+  </div>
+</header>
+
 
   <!-- HERO -->
   <section class="hero">
@@ -95,16 +107,10 @@
     </div>
 
 <div class="event-banner banner-golf">
-  <div class="banner-overlay"></div>
-  <div class="banner-content">
-    <div class="banner-kicker">Celebrity Golf Day</div>
-    <h3 class="banner-title">Tee off for impact</h3>
-    <p class="banner-text">
-      Premium sponsorship opportunities, brand visibility, and meaningful community upliftment.
-    </p>
-  </div>
+  <img class="banner-image" src="golf.PNG" alt="Celebrity Golf Day banner" />
+  <div class="banner-overlay"></div><br>
 </div>
-
+<br>
     <div class="event-body" id="golfBody">
       <div class="package-grid premium-grid">
         <!-- MAIN -->
@@ -285,23 +291,17 @@
     </div>
 
     <div class="event-banner banner-gala">
-  <div class="banner-overlay"></div>
-  <div class="banner-content">
-    <div class="banner-kicker">Gala Dinner</div>
-    <h3 class="banner-title">An evening of legacy & purpose</h3>
-    <p class="banner-text">
-      Reserve a table, honour excellence, and support youth development through sport.
-    </p>
-  </div>
-</div>
+    <img class="banner-image" src="gala.jpeg" alt="Celebrity Golf Day banner" />
+    <div class="banner-overlay"></div>
+    </div>
 
-
+<br>
     <div class="event-body" id="galaBody">
       <div class="package-grid premium-grid">
         <article class="pkg premium" data-gala="platinum">
           <div class="pkg-top">
             <h3>Platinum Table</h3>
-            <div class="pkg-price">R500 000</div>
+            <div class="pkg-price">R250 000</div>
           </div>
           <p class="pkg-sub">Maximum prestige and visibility.</p>
           <div class="pkg-what">What you get</div>
@@ -316,7 +316,7 @@
         <article class="pkg" data-gala="gold">
           <div class="pkg-top">
             <h3>Gold Table</h3>
-            <div class="pkg-price">R350 000</div>
+            <div class="pkg-price">R200 000</div>
           </div>
           <p class="pkg-sub">High-value hospitality and exposure.</p>
           <div class="pkg-what">What you get</div>
@@ -331,7 +331,7 @@
         <article class="pkg" data-gala="silver">
           <div class="pkg-top">
             <h3>Silver Table</h3>
-            <div class="pkg-price">R200 000</div>
+            <div class="pkg-price">R150 000</div>
           </div>
           <p class="pkg-sub">Elegant participation at the dinner.</p>
           <div class="pkg-what">What you get</div>
@@ -343,10 +343,24 @@
           <button class="pkg-btn" type="button">Select Table</button>
         </article>
 
-        <article class="pkg" data-gala="Single-Ticket">
+        <article class="pkg" data-gala="Corporate-Sponsored-Individual">
           <div class="pkg-top">
-            <h3>Single Ticket</h3>
-            <div class="pkg-price">R20 000</div>
+            <h3>Corporate Sponsored Individual</h3>
+            <div class="pkg-price">R15 000</div>
+          </div>
+          <p class="pkg-sub">Elegant participation at the dinner.</p>
+          <div class="pkg-what">What you get</div>
+          <ul class="pkg-list">
+            <li>1 seat at the gala dinner table</li>
+            <li>Recognition at the dinner</li>
+          </ul>
+          <button class="pkg-btn" type="button">Select Ticket</button>
+        </article>
+
+          <article class="pkg" data-gala="Single-Ticket">
+          <div class="pkg-top">
+            <h3>Individual Ticket</h3>
+            <div class="pkg-price">R2 500</div>
           </div>
           <p class="pkg-sub">Elegant participation at the dinner.</p>
           <div class="pkg-what">What you get</div>
@@ -519,10 +533,11 @@
           <legend>Table Selection</legend>
           <select id="tableType" required>
             <option value="">Select Table Type</option>
-            <option value="platinum">Platinum Table – R500 000</option>
-            <option value="gold">Gold Table – R350 000</option>
-            <option value="silver">Silver Table – R200 000</option>
-            <option value="single-ticket">Single Ticket – R20 000</option>
+            <option value="platinum">Platinum Table – R250 000</option>
+            <option value="gold">Gold Table – R200 000</option>
+            <option value="silver">Silver Table – R150 000</option>
+            <option value="single-ticket">Corporate Sponsored Individual – R15 000</option>
+            <option value="single-ticket"> Individual Ticket – R2 500</option>
           </select>
 
           <select id="tableQty" required>

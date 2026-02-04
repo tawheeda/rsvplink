@@ -225,13 +225,6 @@ packageSelect.addEventListener("change", () => {
             <option>XS</option><option>S</option><option>M</option>
             <option>L</option><option>XL</option><option>XXL</option>
           </select>
-          <input type="text" placeholder="Bottom Size" required />
-          <input type="text" placeholder="Glove Size" required />
-          <select required>
-            <option value="">Glove Hand</option>
-            <option>Left</option>
-            <option>Right</option>
-          </select>
           <select required>
             <option value="">Dietary Requirement</option>
             <option>None</option>
@@ -271,7 +264,9 @@ const galaGuests = $("galaGuests");
 const galaTableLimits = {
   platinum: 3,
   gold: 5,
-  silver: 6
+  silver: 4,
+  corporateSponsoredIndividual: 1,
+  individualTicket: 1
 };
 
 function resetGalaModal() {
@@ -318,9 +313,9 @@ tableType.addEventListener("change", () => {
 
   // Single Ticket logic
   if (tier === "single-ticket") {
-    tableQty.innerHTML = `<option value="">Number of Seats</option>`;
+    tableQty.innerHTML = `<option value="">Number of Tables</option>`;
     for (let i = 1; i <= 5; i++) {
-      tableQty.innerHTML += `<option value="${i}">${i} Seat${i > 1 ? "s" : ""}</option>`;
+      tableQty.innerHTML += `<option value="${i}">${i} Table${i > 1 ? "s" : ""}</option>`;
     }
     return;
   }
